@@ -1,0 +1,20 @@
+{
+  "name": "text-hover-ani",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "sass": "^1.67.0",
+    "split-type": "^0.3.3",
+    "spltjs": "^1.1.0"
+  }
+}
