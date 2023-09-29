@@ -1,0 +1,19 @@
+{
+  "name": "scrollreaveal-cards",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.25",
+    "gsap": "^3.12.2",
+    "sass": "^1.68.0"
+  }
+}
