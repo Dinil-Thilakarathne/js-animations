@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+.hero{
+    min-height: 150vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .anim-text-line{
+        position: absolute;
+        width: 110vw;
+        transform: rotate(10deg);
+        background-color: #fff;
+        box-shadow: 5px 5px 10px #000;
+        & h1{
+            width: 100%;
+        }
+    }
+    .anim-text-line-ltr{
+        position: absolute;
+        width: 110vw;
+        transform: rotate(-10deg);
+        background-color: #fff;
+        box-shadow: 5px 5px 10px #000;
+        & h1{
+            width: 100%;
+        }
+    }
+}

@@ -55,14 +55,14 @@ body{
         overflow: hidden;
         
         .box{
-            width: min(80%, 1024px);
-            height: 50vh;
+            width: min(90%, 1024px);
+            min-height: 50vh;
             // background-color: white;
             position: absolute;
             border: none;
             border-radius: 1rem;
             margin-top: 2.5rem;
-            padding: .75rem .5rem;
+            padding: .75rem;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -74,11 +74,11 @@ body{
             }
             &:nth-child(2){
                 background-color: rgb(160, 222, 135);
-                transform: translateY(25px) translateX(-10px);
+                transform: translateY(10px) translateX(-5px);
                 // display: none;
             }
             &:nth-child(3){
-                transform: translateY(50px) translateX(-20px);
+                transform: translateY(20px) translateX(-10px);
                 background-color: rgb(135, 202, 222);
                 // display: none;
             }
@@ -121,6 +121,7 @@ body{
                     & .tags{
                         width: 100%;
                         display: flex;
+                        flex-wrap: wrap;
                         align-items: center;
                         justify-content: flex-start;
                         gap: .75rem;
