@@ -2,7 +2,7 @@ import '../scss/style.scss'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 gsap.registerPlugin(ScrollTrigger)
-import SplitType from 'split-type'
+
 
 var t1 = gsap.timeline({scrollTrigger:{
     trigger:"body",
