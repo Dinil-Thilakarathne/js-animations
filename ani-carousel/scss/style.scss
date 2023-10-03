@@ -47,10 +47,11 @@ html.lenis {
 
 .swiper {
     width: 100%;
-    min-height: 75vh;
+    min-height: 50vh;
+    overflow: hidden;
 
     .swiper-wrapper{
-        height: 75vh;
+        height: 50vh;
         width: 100%;
 
         .swiper-slide {

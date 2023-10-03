@@ -24,3 +24,18 @@ gsap.from(loaderHeader.chars, {
     ease: 'power2.out',
     stagger: .1
 })
+t1.from('.mySwiper', {
+    x: 500,
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+        trigger: '.loader',
+    }
+// }).from('.swiper-slide', {
+//     // scale:0,
+//     duration: .5,
+//     scrollTrigger: {
+//         trigger: '.mySwiper',
+//     }
+// })
