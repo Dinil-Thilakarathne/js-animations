@@ -12,6 +12,7 @@ body{
     justify-content: center;
     position: relative;
     font-family: 'Nunito', sans-serif;
+    overflow: hidden;
 }
 html.lenis {
     height: auto;
@@ -45,10 +46,10 @@ html.lenis {
     }
 }
 
-.swiper {
-    width: 100%;
-    min-height: 50vh;
+.mySwiper {
+    width: min(100%, 1440px);
     overflow: hidden;
+    padding: 40px 20px !important;
 
     .swiper-wrapper{
         height: 50vh;
@@ -57,7 +58,6 @@ html.lenis {
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #fff;
             display: flex;
             justify-content: center;
             align-items: center;

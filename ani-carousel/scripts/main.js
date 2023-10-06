@@ -3,15 +3,15 @@ import {gsap, ScrollTrigger} from 'gsap/all'
 import SplitType from 'split-type'
 gsap.registerPlugin(ScrollTrigger)
 
-const t1 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.loader',
-        start: '50% 50%',
-        end: '150% 50%',
-        scrub: true,
-        markers: true,
-    }}
-)
+// const t1 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: '.loader',
+//         start: '50% 50%',
+//         end: '150% 50%',
+//         scrub: true,
+//         markers: true,
+//     }}
+// )
 
 
 const loaderHeader = new SplitType('.loader-header', {types: 'chars'})
@@ -24,18 +24,16 @@ gsap.from(loaderHeader.chars, {
     ease: 'power2.out',
     stagger: .1
 })
-t1.from('.mySwiper', {
-    x: 500,
+gsap.from('.mySwiper', {
+    x: '100%',
     opacity: 0,
-    duration: 1,
+    duration: 3,
+    scale:0,
+    delay:1,
     ease: 'power2.out',
     scrollTrigger: {
         trigger: '.loader',
+        start: '50% 50%',
+        markers: true
     }
-// }).from('.swiper-slide', {
-//     // scale:0,
-//     duration: .5,
-//     scrollTrigger: {
-//         trigger: '.mySwiper',
-//     }
-// })
+})

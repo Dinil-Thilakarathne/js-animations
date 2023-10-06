@@ -15,19 +15,20 @@ body{
     justify-content: center;
 }
 .main{
+    min-height: 100vh;
     width: min(90%, 1440px);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 40px;
 
     & h1{
-        font-size: 5.5vw;
+        font-size: min(6.5vw, 6rem);
     }
     & p{
-        font-size: 3.5vw;
+        font-size: min(3.5vw, 2.5rem);
     }
     & .btn{
         padding: .75rem 2.5rem;
