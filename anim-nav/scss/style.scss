@@ -14,3 +14,98 @@ body{
     font-family: 'Nunito', sans-serif;
     overflow: hidden;
 }
+.hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #000;
+ 
+    @media (min-width:1440px) {
+        padding-inline: calc((100vw - 1440px) /2);
+    }
+
+    &-content{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+
+        &__description{
+            font-size: clamp(1.5rem, 5vw, 4rem);
+        }
+
+        &__btn{
+            font-size: 1.25rem;
+            border: none;
+            border-radius: 10px;
+            padding: .75rem 2.5rem;
+            cursor: pointer;
+        }
+    }
+    .nav-icon{
+        position: fixed;
+        top: 100px;
+        right: 20%;
+        font-size: 3rem;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        transform-origin: top;
+        pointer-events: none;
+        border: none;
+        border-radius: 1rem;
+    }
+}
+
+nav{
+    position: absolute;
+    right: 20%;
+    transform-origin: top;
+    overflow: hidden;
+    z-index: 100;
+    & ul {
+        list-style: none;
+        & li {
+            & .mask{
+                overflow: hidden;
+            }
+            & a{
+                font-size: 4rem;
+                text-decoration: none;
+                color: #eee;
+                font-weight: bold;
+                position: relative;
+                display: block;
+                cursor: pointer;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    border-bottom: 1px solid white;
+                    bottom: 0;
+                    transform: scaleX(0);
+                    transition: transform 0.5s ease;
+                    transform-origin: left;
+                }
+    
+                &:hover:before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
