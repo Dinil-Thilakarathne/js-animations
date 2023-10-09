@@ -28,7 +28,8 @@ tl
     scale: 0.95,
 })
 .to(heroContent, {
-    pointerEvents: 'none'
+    pointerEvents: 'none',
+    filter: 'blur(4px)'
 }, "<")
 .to(overlay, {
     scaleY: 1
