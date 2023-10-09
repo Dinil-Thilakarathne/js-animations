@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // padding-inline: 2rem;
+    background-color: #000;
+
+    & .hero{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #eee;
+
+        
+        @media (min-width:1440px) {
+            padding-inline: calc((100vw - 1440px) / 2);
+        }
+
+
+        &-content{
+            width: 60%;
+
+            & h1{
+                font-size: 4vw;
+            }
+        }
+    }
+
+    & .menu-icon{
+        position: absolute;
+        top: 2rem;
+        right: calc((100vw - 1440px) / 2);
+        z-index: 999;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+
+    & .menu-section{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #242320;
+        color: #eee;
+        padding: 0 2rem;
+        z-index: 2;
+
+        @media (min-width:1440px) {
+            padding-inline: calc((100vw - 1440px) / 2);
+        }
+
+        & .menu{
+            list-style: none;
+
+            & li{
+                padding: 0 1.5rem;
+                overflow: hidden;
+                
+                & .mask{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                }
+
+                & svg{
+                    transform: translateY(8px);
+                    transform-origin: bottom;
+                }
+                & a{
+                    display: block;
+                    text-decoration: none;
+                    font-size: 5rem;
+                    color: #e4ddd4;
+                    font-weight: bold;
+
+                    &:hover{
+                        color: #adadad;
+                    }
+                }
+            }
+        }
+    }
+}
