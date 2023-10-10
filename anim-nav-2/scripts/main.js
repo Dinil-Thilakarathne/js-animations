@@ -1,12 +1,16 @@
 import '../scss/style.scss'
 import { gsap } from 'gsap';
+import SplitType from 'split-type'
 
 const hero = document.querySelector('.hero');
 const menuSection = document.querySelector('.menu-section')
 const menuIcon = document.querySelector('.menu-icon')
+const menuIconLine = document.querySelectorAll('.menu-icon__line')
 const menuLinks = document.querySelectorAll('.menu-link')
 const menuItems = new gsap.utils.toArray('.menu .mask')
 const menuItemsIcons = new gsap.utils.toArray('.arrow-svg')
+
+const heroText = new SplitType('.hero h1', { types: 'chars' })
 
 const tl = gsap.timeline({
     defaults: {
@@ -24,12 +28,27 @@ gsap.set(menuItems, {
 gsap.set(menuItemsIcons, {
     scale:0
 })
+gsap.set(heroText.chars, {
+    y:100,
+    scale:0,
+    opacity:0
+})
+
+gsap.to(heroText.chars, {
+    y:0,
+    scale:1,
+    opacity:1,
+    stagger:.02,
+    duration:.8,
+    ease: 'power2.in',
+})
+
 tl
     .to(hero, {
         scale: 0.85,
     })
-    .to(menuIcon, {
-        color:'#fff'
+    .to(menuIconLine, {
+        backgroundColor:'#fff'
     }, "<")
     .to(menuSection, {
         scaleY:1,
@@ -59,7 +78,6 @@ menuIcon.addEventListener('click',() => {
 menuLinks.forEach(link => {
     let linkIcon = link.querySelector('.arrow-svg')
     let linkText = link.querySelector('a')
-    console.log(linkIcon);
 
     link.addEventListener('mouseenter',()=> {
         gsap.to(linkIcon, {
