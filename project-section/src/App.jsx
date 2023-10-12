@@ -1,3 +1,4 @@
+import Cursor from "../components/Cursor"
 import { project1Image, project2Image, project3Image } from "../public"
 import '../scss/style.scss'
 
@@ -53,9 +54,10 @@ const App = () => {
 
     return (
         <div className="project-section">
+            <Cursor/>
             {projectContents.map(project => {
                 return (
-                    <div className={`project ${project.projectName}`}>
+                    <div className={`project ${project.projectName} grow`}>
                         <div className="project-top">
                             <div className="project-top__line"></div>
                             <div className="project-top__content">

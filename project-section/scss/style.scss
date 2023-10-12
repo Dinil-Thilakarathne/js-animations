@@ -34,6 +34,7 @@ $boorder-clr: #8CA2C0;
   margin: 20px;
   padding: 20px;
   width: min(100%, 1240px);
+  cursor: none;
 
 
   .project-top {
@@ -188,4 +189,48 @@ $boorder-clr: #8CA2C0;
       }
   }
 }
+
+.cursor{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    // border: 2px solid #000;
+    background-color: #444;
+    transition: transform .3s ease;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg{
+        fill: #eee;
+    }
+    @media (min-width:480px) {
+        // display: block;
+    }
+
+    &.hidden{
+        display: none;
+        visibility: hidden;
+    }
+    .btn-hidden{
+        display: none;
+        visibility: hidden;
+    }
+    &.grow, .grow-small{
+        transform: scale(4.5);
+        background: #fff;
+        mix-blend-mode: difference;
+        border: none;
+    }
+    &.grow-small{
+        transform: scale(2);
+    }
+}
+
 
