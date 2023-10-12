@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+$bg-primary-clr: #0E100F; 
+$text-primary-clr: #FFFCE1; 
+$text-sec-clr: #7C7C6F; 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: #0E100F;
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 120rem;
+    padding-left: max(1.5rem,min(6.73139vw - 0.0776699rem,8rem));
+    padding-right: max(1.5rem,min(6.73139vw - 0.0776699rem,8rem));
+}
+header{
+    height: 75px;
+    width: 100%;
+    padding: 12px 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    & .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: max(2rem,min(5.73529vw - 2.44485rem,4.4375rem));
+
+        & .header__nav{
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: space-between;
+            min-height: 3.3125rem;
+
+            & .header__menu{
+                display: flex;
+                gap: 1.5rem;
+                list-style: none;
+
+                &-item{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    & a{
+                        align-items: center;
+                        color: $text-sec-clr;
+                        cursor: pointer;
+                        display: flex;
+                        font-size: 1.125rem;
+                        font-weight: 600;
+                        height: 100%;
+                        letter-spacing: -.01em;
+                        line-height: 1.05;
+                        padding-bottom: 1rem;
+                        padding-top: 1rem;
+                        text-decoration: none;
+                        transition: color .3s ease-in;
+                    }
+
+                    &.get-gsap-btn{
+                        align-items: center;
+                        background: 0 0;
+                        border: 2px solid $text-primary-clr;
+                        border-radius: 6.25rem;
+                        color: $bg-primary-clr;
+                        cursor: pointer;
+                        display: inline-flex;
+                        font-size: max(1rem,min(.38835vw + .908981rem,1.375rem));
+                        font-weight: 600;
+                        gap: 0.363636em;
+                        justify-content: center;
+                        letter-spacing: -.01em;
+                        line-height: 1;
+                        overflow: hidden;
+                        padding: 0 1.5rem;
+                        position: relative;
+                        text-decoration: none;
+                        
+                        & a{
+                            color: $text-primary-clr;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero{
+    min-height: 100vh;
+    padding-bottom: 8.75rem;
+    padding-top: 13.75rem;
+
+    &-heading{
+        position: relative;
+        z-index: 1;
+        padding-bottom: max(2.5rem,min(2.589vw + 1.8932rem,5rem));
+        font-size: max(5.125rem,min(13.3333vw + 2rem,18rem));
+        font-weight: 600;
+        letter-spacing: -.02em;
+        line-height: .9;
+        color: $text-primary-clr;
+    }
+}
