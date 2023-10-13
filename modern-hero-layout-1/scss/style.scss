@@ -19,11 +19,17 @@ body{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: relative;
 
+    @media (min-width: 1023px) {
+        flex-direction: row;
+    }
+
     & .header{
+        max-height: 125px;
         position: absolute;
         right: 0;
         top: 0;
@@ -45,7 +51,10 @@ body{
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-            gap: 8px;
+            
+            @media (min-width: 1023px) {
+                // gap: 8px;
+            }
 
             & li{
                 text-align: right;
@@ -82,7 +91,7 @@ body{
     }
 
     & .hero{
-        height: 100%;
+        height: calc(100% - 125px);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -90,14 +99,27 @@ body{
         justify-content: space-between;
         overflow: hidden;
 
-        & .hero-img{
+        @media (min-width: 1023px) {
+            flex-direction: row;
             height: 100%;
-            width: 100%;
+        }
+
+        & .hero-img{
+            height: 50%;
+            width: calc(100% - 24px);
+            border-radius: .75rem;
             background-image: url('hero-img.png');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: -100px;
+            background-position: center;
             position: relative;
+            
+            @media (min-width: 1023px) {
+                background-position: -100px;
+                height: 100%;
+                width: 50%;
+                border-radius: 0;
+            }
 
             &__overlay{
                 position: absolute;
@@ -111,22 +133,25 @@ body{
         }
 
         & .hero-content{
-            height: 100%;
-            width: 50%;
-            // background-color: burlywood;
+            height: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            gap: 24px;
-            padding: 4rem 8rem;
+            gap: 12px;
+            padding: .5rem .25rem;
             text-align: center;
 
-
+            @media (min-width: 1023px) {
+                height: 100%;
+                width: 50%;
+                padding: 4rem 6rem;
+            }
 
             &__header{
                 color: #1D2025;
-                font-size: clamp(4.5rem, 8vw, 14rem);
+                font-size: clamp(3.5rem, 8vw, 14rem);
                 font-weight: 400;
                 line-height: 100%; /* 100% */
                 text-transform: uppercase;
@@ -145,13 +170,11 @@ body{
 
 .mask{
     width: 100%;
-    // background-color: #4C5461;
     overflow: hidden;
 
 
     & span{
         display: block;
-        // transform: translateX(100%);
     }
 }
 
@@ -167,11 +190,8 @@ body{
     transform-origin: center center;
     pointer-events: none;
     z-index: 1000;
-    // display: none;
 
-    @media (min-width:480px) {
-        // display: block;
-    }
+
 
     &.hidden{
         display: none;
