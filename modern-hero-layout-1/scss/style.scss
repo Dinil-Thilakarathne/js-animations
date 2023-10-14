@@ -14,11 +14,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .home{
     height: 100vh;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
@@ -210,4 +211,21 @@ body{
 }
 .grow-small{
     transform: scale(2);
+}
+
+.preloader{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #acacac;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+
+    & .bar{
+        height: 100%;
+        width: 10vw;
+        background-color: #FFF;
+    }
 }

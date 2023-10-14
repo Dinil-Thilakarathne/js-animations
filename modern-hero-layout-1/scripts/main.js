@@ -6,6 +6,18 @@ const heroAnimTextElements = document.querySelectorAll('.hero-content .mask span
 const heroImgOverlay = document.querySelector('.hero-img__overlay')
 const headerMenu = document.querySelector('ul')
 const headerLogo = document.querySelector('.header-logo')
+const bars = document.querySelectorAll('.bar')
+
+
+const tlLoader = gsap.timeline()
+
+tlLoader.to(bars, {
+    height:0,
+    duration:1,
+    stagger:.2,
+}).to('.preloader', {
+    display: 'none'
+})
 
 
 const tl = gsap.timeline({
@@ -14,7 +26,11 @@ const tl = gsap.timeline({
     }
 });
 
-tl.fromTo(heroImgOverlay,{
+tl
+.to('.home', {
+    display: 'flex'
+})
+.fromTo(heroImgOverlay,{
     width: '100%'
 },{
     width:0,
@@ -52,9 +68,12 @@ heroAnimTextElements.forEach((element, index) => {
       stagger: 0.4
     }, '-=.4');
 });
-  
 
-tl.play()
+tl.pause()
+tlLoader.eventCallback('onComplete', () => {
+    tl.play();
+});
+
 
 var cursor = document.querySelector('.cursor'),
     cursorScale = document.querySelectorAll('.cursor-scale'),
