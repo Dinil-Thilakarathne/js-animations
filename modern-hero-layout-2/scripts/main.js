@@ -6,6 +6,7 @@ const animText = new SplitType('.hero-content__anim-text', {types: 'words'})
 const heroMainText = new SplitType('.hero-content__title', {types: 'words, chars'})
 const headerItems =  gsap.utils.toArray('.header-item .mask')
 const animTextTopBar = document.querySelector('.hero-content__anim-text::before')
+const arrowIcon = document.querySelector('.arrow-svg')
 
 console.log(headerItems);
 console.log(animTextTopBar);
@@ -65,7 +66,6 @@ gsap.to({}, 0.016, {
                 top: mouseY
             },
             ease: 'slow(0.7, 0.7, false)',
-            delay: 0.05
         })
     }
 });
@@ -99,3 +99,15 @@ cursorScale.forEach(link => {
         }
     });
 });
+
+
+headerItems.forEach(item => {
+    item.addEventListener('mousemove', () => {
+        cursor.classList.add('link-cursor')
+        arrowIcon.classList.remove('hidden')
+    })
+    item.addEventListener('mouseleave', () => {
+        cursor.classList.remove('link-cursor')
+        arrowIcon.classList.add('hidden')
+    })
+})
