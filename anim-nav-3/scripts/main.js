@@ -60,10 +60,3 @@ menuBtn.addEventListener('click', () => {
     menuOpen = !menuOpen
 })
 
-console.log(menuLinks);
-menuLinks.forEach(item => {
-    item.addEventListener('click', () => {
-        menusTL.reverse()
-        menuOpen = !menuOpen
-    })
-})
