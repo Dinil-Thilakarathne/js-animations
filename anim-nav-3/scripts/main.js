@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 const themeChangeBtn = document.querySelector('.theme-change')
 const menuBtn = document.querySelector('.menu-btn')
-// const menuUls = document.querySelectorAll('.header-nav__menu ul')
+const menuLinks = document.querySelectorAll('.top-menu li')
 const menuUls = gsap.utils.toArray('.header-nav__menu ul')
 const topMenuItems = gsap.utils.toArray('.top-menu li')
 const bottomMenuItems = gsap.utils.toArray('.bottom-menu div')
@@ -58,4 +58,12 @@ let menuOpen = false
 menuBtn.addEventListener('click', () => {
     menuOpen ? menusTL.reverse() : menusTL.play()
     menuOpen = !menuOpen
+})
+
+console.log(menuLinks);
+menuLinks.forEach(item => {
+    item.addEventListener('click', () => {
+        menusTL.reverse()
+        menuOpen = !menuOpen
+    })
 })
