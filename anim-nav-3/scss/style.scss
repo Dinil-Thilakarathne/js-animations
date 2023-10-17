@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+$bg-color: #DADBE3;
+$main-text-color: #14151C;
+$sec-text-color: #fff;
+$sec-shade-text-color: #C0C0C0;
+$icon-color: #14151C;
+$btn-bg-color: #FFFFFF;
+$btn-bg-sec-color: #14151C;
+$box-bg-color: #FFFFFF;
+$box-sec-bg-color: #F0F1FA;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: $bg-color;
+    font-kerning: none;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-color: $bg-color;
+
+    & .header{
+        height: 75px;
+        width: min(100%, 1440px);
+        background-color: transparent;
+        padding: 12px 6px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 75px;
+        padding: 12px 24px;
+        position: relative;
+
+        &-logo{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            & span{
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px; /* 120% */
+                letter-spacing: 0.15px;
+            }
+        }
+
+        &-nav{
+            width: min(95%, 320px);
+            height: 100%;
+            position: relative;
+            
+            &__btns{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                & .theme-change{
+                    height: 48px;
+                    aspect-ratio: 1;
+                    border: none;
+                    border-radius: 50%;
+                    background-color: $box-bg-color;
+                    display: grid;
+                    place-content: center;
+                    cursor: pointer;
+                }
+                
+                & button{
+                    display: flex;
+                    padding: 12px 14px;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 8px;
+                    border: none;
+                    border-radius: 24px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; /* 150% */
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    background-color: $btn-bg-color;
+                    color: $main-text-color;
+                    cursor: pointer;
+                    
+                    &.main-btn{
+                        background-color: $btn-bg-sec-color;
+                        color: $sec-text-color;
+                    }
+                }
+            }
+            
+            &__menu{
+                min-height: 45vh;
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                margin-top: 24px;
+                
+                & ul{
+                    width: 100%;
+                    background-color: $box-bg-color;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    position: absolute;
+                    padding: 20px 24px;
+                    border: none;
+                    border-radius: 12px;
+                    overflow: hidden;
+
+                    &.top-menu{
+                        top: 0;
+                    }
+
+    
+                    & li{
+                        width: 100%;
+                        min-height: 56px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 4px 14px;
+                        border-radius: 6px;
+    
+                        & a{
+                            min-height: 100%;
+                            width: 100%;
+                            text-decoration: none;font-size: 22px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0.5px;
+                            text-transform: uppercase;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color: $main-text-color;
+
+                            & svg{
+                                visibility: hidden;
+
+                                & path{
+                                    stroke: $icon-color;
+                                }
+                            }
+
+                        }
+                        &.active{
+                            & svg{
+                                visibility: visible;
+                            }
+                        }
+                        &:hover{
+                            background-color: $box-sec-bg-color;
+
+                            & svg{
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    &.bottom-menu{
+                        bottom: 0;
+                        gap: 20px;
+                        margin-top: 24px;
+
+                        & .title{
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; /* 100% */
+                            letter-spacing: 0.5px;
+                            padding-left: 14px;
+                        }
+
+                        & .input-field{
+                            width: 100%;
+                            padding: 10px 14px;
+                            border-radius: 6px;
+                            background: #F0F1FA;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            & input{
+                                flex-shrink: 0;
+                                border: none;
+                                outline: none;
+                                background-color: transparent;
+                                padding: 8px 0;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+
+    }
+}

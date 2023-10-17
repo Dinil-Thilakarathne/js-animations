@@ -7,7 +7,83 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <div class="home">
+      <header class="header">
+        <div class="header-logo">
+          <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 15.7807C40 24.4962 31.0457 22.8821 20 22.8821C8.9543 22.8821 0 24.4962 0 15.7807C0 7.06528 8.9543 0 20 0C31.0457 0 40 7.06528 40 15.7807Z" fill="#14151C"/>
+            <rect x="2" y="26" width="36" height="12" rx="6" fill="#14151C"/>
+          </svg> 
+          <span>logo</span>           
+        </div>
+        <div class="header-nav">
+          <div class="header-nav__btns">
+            <div class="theme-change">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.75 0C11.1642 0 11.5 0.335786 11.5 0.75L11.5 2.75C11.5 3.16421 11.1642 3.5 10.75 3.5C10.3358 3.5 10 3.16421 10 2.75L10 0.75C10 0.335787 10.3358 0 10.75 0ZM10.75 18C11.1642 18 11.5 18.3358 11.5 18.75L11.5 20.75C11.5 21.1642 11.1642 21.5 10.75 21.5C10.3358 21.5 10 21.1642 10 20.75L10 18.75C10 18.3358 10.3358 18 10.75 18ZM10.75 6.5C8.40279 6.5 6.5 8.40279 6.5 10.75C6.5 13.0972 8.40279 15 10.75 15C13.0972 15 15 13.0972 15 10.75C15 8.40279 13.0972 6.5 10.75 6.5ZM5 10.75C5 7.57436 7.57436 5 10.75 5C13.9256 5 16.5 7.57436 16.5 10.75C16.5 13.9256 13.9256 16.5 10.75 16.5C7.57436 16.5 5 13.9256 5 10.75ZM0.75 10C0.335786 10 0 10.3358 0 10.75C0 11.1642 0.335786 11.5 0.75 11.5H2.75C3.16421 11.5 3.5 11.1642 3.5 10.75C3.5 10.3358 3.16421 10 2.75 10H0.75ZM18.75 10C18.3358 10 18 10.3358 18 10.75C18 11.1642 18.3358 11.5 18.75 11.5H20.75C21.1642 11.5 21.5 11.1642 21.5 10.75C21.5 10.3358 21.1642 10 20.75 10H18.75ZM2.71967 2.71915C3.01257 2.42626 3.48744 2.42627 3.78033 2.71916L5.28036 4.21921C5.57325 4.5121 5.57324 4.98698 5.28035 5.27987C4.98745 5.57276 4.51258 5.57276 4.21969 5.27986L2.71967 3.77981C2.42677 3.48692 2.42678 3.01205 2.71967 2.71915ZM16.2197 16.2192C16.5126 15.9263 16.9874 15.9263 17.2803 16.2192L18.7803 17.7192C19.0732 18.0121 19.0732 18.4869 18.7803 18.7798C18.4874 19.0727 18.0126 19.0727 17.7197 18.7798L16.2197 17.2798C15.9268 16.9869 15.9268 16.5121 16.2197 16.2192ZM2.71967 17.7197C2.42678 18.0126 2.42678 18.4874 2.71967 18.7803C3.01256 19.0732 3.48744 19.0732 3.78033 18.7803L5.28033 17.2803C5.57322 16.9874 5.57322 16.5126 5.28033 16.2197C4.98744 15.9268 4.51256 15.9268 4.21967 16.2197L2.71967 17.7197ZM16.2197 4.21967C15.9268 4.51256 15.9268 4.98744 16.2197 5.28033C16.5126 5.57322 16.9874 5.57322 17.2803 5.28033L18.7803 3.78033C19.0732 3.48744 19.0732 3.01256 18.7803 2.71967C18.4874 2.42678 18.0126 2.42678 17.7197 2.71967L16.2197 4.21967Z" fill="#22272F"/>
+              </svg>                
+            </div>
+            <button class="main-btn">
+              <span>Let’s talk</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                <path d="M7 0.999969L11 5.00003M11 5.00003L7 9.00003M11 5.00003H1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="menu-btn">
+              <span>Menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M1.30275 9.28441C0.583262 9.28441 0 8.70114 0 7.98165V7.98165C0 7.26216 0.583262 6.6789 1.30275 6.6789H6.68709V1.31291C6.68709 0.587812 7.2749 0 8 0V0C8.7251 0 9.31291 0.58781 9.31291 1.31291V6.6789H14.6972C15.4167 6.6789 16 7.26216 16 7.98165V7.98165C16 8.70114 15.4167 9.28441 14.6972 9.28441H9.31291V14.6871C9.31291 15.4122 8.7251 16 8 16V16C7.2749 16 6.68709 15.4122 6.68709 14.6871V9.28441H1.30275Z" fill="#14151C"/>
+              </svg>
+            </button>
+          </div>
+          <nav class="header-nav__menu">
+            <ul class="top-menu">
+              <li class="active">
+                <a href="/">
+                  <span>Home</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                    <ellipse cx="4.1469" cy="4" rx="3.86565" ry="4" fill="#001431"/>
+                  </svg>
+                </a>
+              </li>
+              <li >
+                <a href="/">
+                  <span>Projects</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="#001431">
+                    <path d="M7 0.999969L11 5.00003M11 5.00003L7 9.00003M11 5.00003H1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#001431"/>
+                  </svg>
+                </a>
+              </li>
+              <li >
+                <a href="/">
+                  <span>About US</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="#001431">
+                    <path d="M7 0.999969L11 5.00003M11 5.00003L7 9.00003M11 5.00003H1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#001431"/>
+                  </svg>
+                </a>
+              </li>
+              <li >
+                <a href="/">
+                  <span>contact</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="#001431">
+                    <path d="M7 0.999969L11 5.00003M11 5.00003L7 9.00003M11 5.00003H1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="#001431"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <ul class="bottom-menu">
+              <div class="title">Subscribe to our newsletter</div>
+              <div class="input-field">
+                <input type="email" name="" id="" placeholder="Your email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M7 1L11 5.00006M11 5.00006L7 9.00006M11 5.00006H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>
