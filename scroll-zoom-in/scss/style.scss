@@ -1,0 +1,44 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.img-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    & .row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+
+        & img{
+           max-width: 40%;
+        }
+
+        &.center-row{
+            & img{
+                max-width: 20%;
+            }
+
+            & .anim-img{
+                position: absolute;
+                z-index: 99;
+            }
+        }
+    }
+}
