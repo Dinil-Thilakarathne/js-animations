@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // padding-inline: 2rem;
+    background-color: #000;
+
+    & .hero{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #eee;
+
+        
+        @media (min-width:1440px) {
+            padding-inline: calc((100vw - 1440px) / 2);
+        }
+
+
+        &-content{
+            width: 100%;
+            display: grid;
+            place-items: center;
+
+            & .mask{
+                overflow: hidden;
+                
+                    & h1{
+                        font-size: clamp(3.5rem, 7vw, 10rem);
+                        display: block;
+                    }
+            }
+        }
+    }
+
+    & .menu-icon{
+        position: absolute;
+        top: 4rem;
+        right: 2rem;
+        z-index: 999;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        display: block;
+
+        @media (min-width:1439px) {
+            right: calc((100vw - 1400px) / 2);
+        }
+
+        &__line{
+            height: 4px;
+            width: 30px;
+            display: block;
+            background-color: #222;
+            margin-bottom: 7px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            -webkit-transition: background-color .5s ease, -webkit-transform .2s ease;
+            transition: background-color .5s ease, -webkit-transform .2s ease;
+            transition: transform .2s ease, background-color .5s ease;
+            transition: transform .2s ease, background-color .5s ease, -webkit-transform .2s ease;
+
+            &-left{
+                width: 16.5px;
+                -webkit-transition: all 200ms linear;
+                transition: all 200ms linear;
+            }
+
+            &-right{
+                width: 16.5px;
+                float: right;
+                -webkit-transition: all 200ms linear;
+                -moz-transition: all 200ms linear;
+                -o-transition: all 200ms linear;
+                -ms-transition: all 200ms linear;
+                transition: all 200ms linear;
+            }
+
+        }
+
+        &:hover{
+            .menu-icon__line-left,
+            .menu-icon__line-right{
+                width: 30px;
+
+            }
+        }
+    }
+
+    & .menu-section{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // background-color: #242320;
+        color: #eee;
+        padding: 0 2rem;
+        z-index: 2;
+
+        & .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            & .bar{
+                height: 100%;
+                width: calc(100% / 5);
+                background-color: #334155;
+            }
+        }
+
+        @media (min-width:1440px) {
+            padding-inline: calc((100vw - 1440px) / 2);
+        }
+
+        & .menu{
+            list-style: none;
+            width: max(300px, 60%);
+
+            & li{
+                padding: 0 1.5rem;
+                overflow: hidden;
+                width: fit-content;
+                
+                & .mask{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    
+                }
+                
+                & svg{
+                    transform: translateY(8px);
+                    transform-origin: bottom;
+                }
+                & a{
+                    display: block;
+                    text-decoration: none;
+                    font-size: clamp(3.5rem, 6.5vw, 12rem);
+                    color: #e4ddd4;
+                    font-weight: bold;
+
+                    &:hover{
+                        color: #adadad;
+                    }
+                }
+            }
+        }
+    }
+}
