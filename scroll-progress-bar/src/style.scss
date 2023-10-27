@@ -1,0 +1,77 @@
+* {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html.lenis {
+    height: auto;
+}
+  
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+  
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+}
+  
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: sofia-pro, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+  
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 100px 0 40px;
+}
+  
+h2 {
+    font-weight: 400;
+    margin: 50px 0 10px;
+}
+  
+p {
+    margin: 0 0 30px 0;
+    font-size: 18px;
+}
+ 
+.section {
+    max-width: 1024px;
+    padding: 20px;
+    margin: 75px auto;
+    min-height: 450px;
+    background-color: #cbd5e1;
+    border: none;
+    border-radius: 1rem;
+
+}
+  
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #ef4444;
+    transform-origin: 0%;
+}
+  
