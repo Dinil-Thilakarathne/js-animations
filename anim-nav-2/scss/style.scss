@@ -42,16 +42,14 @@ body{
 
         &-content{
             width: 100%;
-
-            @media (min-width:1024px) {
-                width: 60%;
-            }
+            display: flex;
+            justify-content: center;
 
             & .mask{
                 overflow: hidden;
                 
                     & h1{
-                        font-size: clamp(2.5rem, 5vw, 5rem);
+                        font-size: clamp(3.5rem, 6.5vw, 10rem);
                         display: block;
                     }
             }
