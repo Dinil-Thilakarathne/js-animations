@@ -28,12 +28,6 @@ const Nav = () => {
                         ))
                     }
                 </div>
-                <div className="footer">
-                    <a href="/">Awwards</a>
-                    <a href="/">Awwards</a>
-                    <a href="/">Awwards</a>
-                    <a href="/">Awwards</a>
-                </div>
             </div>
             <Curve/>
         </motion.div>

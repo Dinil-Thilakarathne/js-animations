@@ -1,9 +1,10 @@
-import { Header } from "./components"
+import { Body, Header } from "./components"
 
 const App = () => {
   return (
     <div>
       <Header/>
+      <Body/>
     </div>
   )
 }

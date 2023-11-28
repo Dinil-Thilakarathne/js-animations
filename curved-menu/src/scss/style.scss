@@ -59,7 +59,8 @@ body{
 
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    width: min(80%, 450px);
+    background-color: #444444;
     position: fixed;
     right: 0;
     top: 0;
@@ -96,18 +97,6 @@ body{
             
         }
     }
-    .footer{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        font-size: 12px;
-        gap: 40px;
-
-        & a{
-            text-decoration: none;
-            color: white;
-        }
-    }
 }
 .svgCurve{
     position: absolute;
@@ -115,6 +104,18 @@ body{
     left: -99px;
     width: 100px;
     height: 100%;
-    fill: rgb(41, 41, 41);
+    fill: #444444;
     stroke: none;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__header{
+        font-size: clamp(2.5rem, (3rem + 2.75vw), 8rem);
+    }
 }
