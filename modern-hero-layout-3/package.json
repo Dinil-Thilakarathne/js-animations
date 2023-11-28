@@ -1,0 +1,19 @@
+{
+  "name": "modern-hero-layout-3",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "sass": "^1.69.5",
+    "split-type": "^0.3.4"
+  }
+}
