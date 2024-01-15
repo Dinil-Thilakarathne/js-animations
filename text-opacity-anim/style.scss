@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero{
+    width: min(80%, 1440px);
+
+    & .container{
+        min-height: 50vh;
+        width: 100%;
+    }
+
+    & .anim{
+        padding: 100px 0;
+        font-size: clamp(3rem, (1.5rem + 2vw), 8rem);
+        line-height: 1.5;
+    }
+}
