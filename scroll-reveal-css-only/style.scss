@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Poppins";
+    // background-color: #000000;
+    
+}
+html.lenis {
+    height: auto;
+}
+  
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+  
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+  
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+  
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+img{
+    max-width: 100%;
+}
+.main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & *{
+        // max-width: 1024px;
+
+        & span{
+            color: hsl(0 0% 100% / 0.2);
+            background-clip: text;
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(90deg, white, white);
+            text-align: center;
+            animation: text-reveal linear forwards;
+            animation-timeline: view();
+            animation-range-start: cover 20vh;
+            animation-range-end: cover 50vh;
+    
+        }
+    }
+
+
+
+}
+
+@keyframes text-reveal {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+
+// general style 
+.cover{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .header{
+        font-size: clamp(2rem, (1.5rem + 2vw), 10rem);
+    }
+}
+.main{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #252525;
+
+    &-header{
+        text-align: center;
+
+        & span{
+            border-radius: 48px 48px 0px 48px;
+            font-size: clamp(2rem, (1.5rem + 2vw), 10rem);
+            padding: .75rem 1.5rem;
+        }
+    }
+
+    &-content{
+        width: min(100%, 1440px);
+        display: flex;
+        gap: 1rem
+        ;
+
+        & .col{
+            width: 50%;
+            border-radius: 24px;
+            border: 1px solid #E9E9E9;
+            background: #FFF;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            & .anim-text{
+                padding: 1rem;
+                width: 80%;
+                background: #252525;
+                display: block;
+                
+                &:nth-child(1){
+                    margin-left: 20%;
+                    border-radius: 32px 32px 0px 32px;
+                }
+                
+                &:nth-child(2){
+                    border-radius: 32px 32px 32px 0px;
+                }
+            }
+        }
+    }
+}
