@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image gallry with GSAP Flip</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div class="gallery" data-scroll-container>
+      <button class="btn flip-btn">Flip state</button>
+      <div class="gallery-container" data-scroll-section>
+        <div class="img">
+          <img src="assets/img-1.jpg" alt="" />
+        </div>
+        <div class="img">
+          <img src="assets/img-2.jpg" alt="" />
+        </div>
+        <div class="img">
+          <img src="assets/img-3.jpg" alt="" />
+        </div>
+        <div class="img">
+          <img src="assets/img-4.jpg" alt="" />
+        </div>
+        <div class="img">
+          <img src="assets/img-5.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+      // locomotive smooth scroll
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+
+      //   gsap flip animation
+      gsap.registerPlugin(Flip, CustomEase);
+
+      CustomEase.create("customEase", "0.83, 0 , 0.17, 1");
+      const galleryContainer = document.querySelector(".gallery-container"),
+        imgs = document.querySelectorAll(".img"),
+        flipBtn = document.querySelector(".flip-btn");
+
+      flipBtn.addEventListener("click", () => {
+        let state = Flip.getState(".gallery-container .img");
+
+        galleryContainer.classList.toggle("order");
+
+        imgs.forEach((img, i) => {
+          img.classList.toggle("reorder");
+        });
+
+        // animate from the previous state to the current one:
+        Flip.from(state, {
+          duration: 2,
+          ease: "customEase",
+          absolute: true,
+          stagger: 0.05,
+        });
+      });
+    </script>
+  </body>
+</html>
